@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #Prova per vedere se i commit e i pull funzionano correttamente
 import os
-import datetime
+from datetime import datetime
 def sensor():
     for i in os.listdir('/sys/bus/w1/devices'):
         if i != 'w1_bus_master1':
