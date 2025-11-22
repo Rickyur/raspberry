@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#Prova per vedere se i commit e i pull funzionano correttamente
 import os
 def sensor():
     for i in os.listdir('/sys/bus/w1/devices'):
