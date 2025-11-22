@@ -15,6 +15,7 @@ def read(ds18b20):
     secondline = text.split("\n")[1]
     temperaturedata = secondline.split(" ")[9]
     temperature = float(temperaturedata[2:])
+    print(temperaturedata[2:])
     celsius = temperature / 1000
     return celsius
 def loop(ds18b20):
