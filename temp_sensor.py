@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #Prova per vedere se i commit e i pull funzionano correttamente
 import os
+import datetime
 def sensor():
     for i in os.listdir('/sys/bus/w1/devices'):
         if i != 'w1_bus_master1':
@@ -19,7 +20,9 @@ def read(ds18b20):
 def loop(ds18b20):
     while True:
         if read(ds18b20) != None:
-            print("Current temperature : %0.3f C" % read(ds18b20))
+            now_datetime = datetime.now()
+            print("Current temperature : %0.3f C" % read(ds18b20) + now_datetime)
+            
 def kill():
     quit()
 if __name__ == '__main__':
