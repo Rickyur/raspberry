@@ -19,7 +19,7 @@ def read(ds18b20):
 def loop(ds18b20):
     while True:
         if read(ds18b20) != None:
-            print("Current temperature : %0.3f C" % read(ds18b20)[0])
+            print("Current temperature : %0.3f C" % read(ds18b20))
 def kill():
     quit()
 if __name__ == '__main__':
