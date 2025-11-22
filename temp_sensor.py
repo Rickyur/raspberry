@@ -21,7 +21,8 @@ def loop(ds18b20):
     while True:
         if read(ds18b20) != None:
             now_datetime = datetime.now()
-            print("Current temperature : %0.3f C" % read(ds18b20) + now_datetime)
+            now_datetime_str = now_datetime.strftime("%Y-%m-%d %H:%M:%S")
+            print("Current temperature : %0.3f C   [ %s ]" % (read(ds18b20), now_datetime_str))
             
 def kill():
     quit()
