@@ -15,13 +15,11 @@ def read(ds18b20):
     temperaturedata = secondline.split(" ")[9]
     temperature = float(temperaturedata[2:])
     celsius = temperature / 1000
-    farenheit = (celsius * 1.8) + 32
-    return celsius, farenheit
+    return celsius
 def loop(ds18b20):
     while True:
         if read(ds18b20) != None:
             print("Current temperature : %0.3f C" % read(ds18b20)[0])
-            print("Current temperature : %0.3f F" % read(ds18b20)[1])
 def kill():
     quit()
 if __name__ == '__main__':
