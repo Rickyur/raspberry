@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-#Prova per vedere se i commit e i pull funzionano correttamente
 import os
 from datetime import datetime
 def sensor():
